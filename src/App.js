@@ -8,7 +8,7 @@ import './styles.css'
 const verificacao = yup.object({
 	firstName: yup.string().required("Primeiro nome é obrigatório!").max(10, "Máximo de 10 caracteres").min(3, "Mínimo de 3 caracter"), // Dizendo que é uma string e que é obrigatório
 	lastName: yup.string().required("Sobre nome é obrigatório!").max(10, "Máximo de 10 caracteres").min(3, "Mínimo de 3 caracter"),
-	job: yup.string().required("Profissão é obrigatório!").max(10, "Máximo de 10 caracteres").min(3, "Mínimo de 3 caracter"),
+	job: yup.string().required("Profissão é obrigatório!").max(30, "Máximo de 30 caracteres").min(3, "Mínimo de 3 caracter"),
 	gender: yup.string().required("Gênero é obrigatório!"),
 	age: yup.string().required("Idade é obrigatório!"),
 }).required();
@@ -19,7 +19,10 @@ function App() {
 		resolver: yupResolver(verificacao)
 	})
 
-	const onSubmitForm = data => console.log(data)
+	const onSubmitForm = data => {
+		console.log(data)
+		alert('Cadastro realizado com sucesso!')
+	}
 
 	return (
 		<div className="app">
