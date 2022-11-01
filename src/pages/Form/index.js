@@ -1,4 +1,7 @@
 import { useForm } from 'react-hook-form';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
@@ -20,8 +23,11 @@ function Form() {
 
 	const onSubmitForm = data => {
 		console.log(data)
-		alert('Cadastro realizado com sucesso!');
+		alert('Cadastro realizado com sucesso! Dados no console.');
+		setOpen(!isOpen)
 	}
+
+	const [isOpen, setOpen] = useState(false);
 
 	return (
 		<div className="app">
@@ -68,6 +74,18 @@ function Form() {
 				<button type='submit'>
 						CADASTRAR
 				</button>
+
+				{
+					isOpen ? 
+					<button type='reset'>
+						<Link className="btn-link" to="/end">
+        					Próxima página
+      					</Link>
+					</button> 
+					: 
+					""
+				}
+
 			</form>
 		</div>
 	);
