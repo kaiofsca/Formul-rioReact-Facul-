@@ -59,7 +59,9 @@ function Form() {
 							<option value="">Selecione</option>
 							<option value="female">Feminino</option>
 							<option value="male">Masculino</option>
+							<option value="heli">Helicóptero RMAX Type II</option>
 							<option value="other">Outro</option>
+							<option value="nothing">Prefiro não informar</option>
 						</select>
 						<p>{errors.gender?.message}</p>
 					</div>
