@@ -5,8 +5,8 @@ import './home.css'
 function Home() {
 	return (
 		<div className="app">
-			<h1>GRUPO REACT</h1>
-			<button>
+			<h1 className="title">GRUPO REACT</h1>
+			<button className="btn">
 				<Link className="btn-link" to="/form">
         			FORMULÁRIO
       			</Link>

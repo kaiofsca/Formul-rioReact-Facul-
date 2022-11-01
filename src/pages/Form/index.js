@@ -20,7 +20,7 @@ function Form() {
 
 	const onSubmitForm = data => {
 		console.log(data)
-		alert('Cadastro realizado com sucesso!')
+		alert('Cadastro realizado com sucesso!');
 	}
 
 	return (
@@ -65,7 +65,9 @@ function Form() {
 					</div>
 				</div>
 
-				<button type='submit'>CADASTRAR</button>
+				<button type='submit'>
+						CADASTRAR
+				</button>
 			</form>
 		</div>
 	);

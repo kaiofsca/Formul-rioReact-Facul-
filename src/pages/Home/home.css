@@ -3,14 +3,18 @@
     flex-direction: column;
 }
 
-/* h1 {
+.title {
     color: white;
     font-size: 6rem;
-} */
+} 
 
-/* button {
+.btn {
     width: 50%;
-} */
+} 
+
+.btn:hover {
+    opacity: .5;
+}
 
 .btn-link {
     text-decoration: none;
